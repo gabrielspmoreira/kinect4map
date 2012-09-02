@@ -11,7 +11,7 @@ using ESRI.ArcGIS.Client.Symbols;
 
 namespace Kinect4Map.Drawing
 {
-    public class HandsDrawer
+    public class HandsMapDrawer
     {
         private Map map;
         private GraphicsLayer handsGraphicsLayer;
@@ -26,7 +26,7 @@ namespace Kinect4Map.Drawing
         private Graphic rightHandGraphic;
         private Graphic leftHandGraphic;
 
-        public HandsDrawer(Map map, GraphicsLayer handsGraphicsLayer, KinectSensor sensor,
+        public HandsMapDrawer(Map map, GraphicsLayer handsGraphicsLayer, KinectSensor sensor,
                            Symbol rightHandSymbolBrowsing, Symbol leftHandSymbolBrowsing,
                            Symbol rightHandSymbolPanning, Symbol leftHandSymbolPanning,
                            Symbol rightHandSymbolZooming, Symbol leftHandSymbolZooming)
@@ -84,20 +84,20 @@ namespace Kinect4Map.Drawing
             }
             
             handGraphic.Geometry = handCoordinate;
-            SetHandsSymbol(HandSymbol.Browsing);
+            SetHandsSymbol(HandMapSymbol.Browsing);
             ShowHand(handGraphic);
         }
 
         public void StartZooming()
         {
-            SetHandsSymbol(HandSymbol.Zooming);
+            SetHandsSymbol(HandMapSymbol.Zooming);
             ShowHand(rightHandGraphic);
             ShowHand(leftHandGraphic);
         }
 
         public void StartPanning(JointType jointType)
         {
-            SetHandsSymbol(HandSymbol.Panning);
+            SetHandsSymbol(HandMapSymbol.Panning);
 
             if (jointType == JointType.HandRight)
             {
@@ -111,19 +111,19 @@ namespace Kinect4Map.Drawing
             }
         }
 
-        private void SetHandsSymbol(HandSymbol handState)
+        private void SetHandsSymbol(HandMapSymbol handState)
         {
             switch (handState)
             {
-                case HandSymbol.Browsing:
+                case HandMapSymbol.Browsing:
                     leftHandGraphic.Symbol = leftHandSymbolBrowsing;
                     rightHandGraphic.Symbol = rightHandSymbolBrowsing;
                     break;
-                case HandSymbol.Panning:
+                case HandMapSymbol.Panning:
                     leftHandGraphic.Symbol = leftHandSymbolPanning;
                     rightHandGraphic.Symbol = rightHandSymbolPanning;
                     break;
-                case HandSymbol.Zooming:
+                case HandMapSymbol.Zooming:
                     leftHandGraphic.Symbol = leftHandSymbolZooming;
                     rightHandGraphic.Symbol = rightHandSymbolZooming;
                     break;

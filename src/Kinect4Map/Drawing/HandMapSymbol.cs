@@ -1,6 +1,6 @@
 ﻿namespace Kinect4Map.Drawing
 {
-    public enum HandSymbol
+    public enum HandMapSymbol
     {
         Browsing,
         Panning,
