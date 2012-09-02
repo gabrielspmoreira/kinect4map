@@ -25,7 +25,10 @@ namespace Kinect4Map.Utils
             var proportionalX = (int)(((depthPoint.X / KIN_CAPTURE_WIDTH) * controlWidth) * PAN_FACTOR);
             var proportionalY = (int)(((depthPoint.Y / KIN_CAPTURE_HEIGHT) * controlHeight) * PAN_FACTOR);
 
-            return new Point(proportionalX, proportionalY);
+            var adjCenteredX = proportionalX - (((controlWidth * PAN_FACTOR) - controlWidth) / 2);
+            var adjCenteredY = proportionalY - (((controlHeight * PAN_FACTOR) - controlHeight) / 2);
+
+            return new Point(adjCenteredX, adjCenteredY);
         }
 
         public static Point GetRelativeScreenPointsDistance(SkeletonPoint point1, SkeletonPoint point2, Double controlWidth, Double controlHeight, KinectSensor sensor)
