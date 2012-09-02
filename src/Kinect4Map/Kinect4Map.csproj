@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Drawing\HandsDrawer.cs" />
+    <Compile Include="Drawing\HandSymbol.cs" />
     <Compile Include="Gestures\MapClickGestureHandler.cs" />
     <Compile Include="Gestures\MapZoomGestureHandler.cs" />
     <Compile Include="Gestures\MapPanGestureHandler.cs" />

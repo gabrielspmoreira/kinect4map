@@ -11,13 +11,6 @@ using ESRI.ArcGIS.Client.Symbols;
 
 namespace Kinect4Map.Drawing
 {
-    public enum HandSymbol
-    {
-        Browsing,
-        Panning,
-        Zooming
-    }
-
     public class HandsDrawer
     {
         private Map map;
