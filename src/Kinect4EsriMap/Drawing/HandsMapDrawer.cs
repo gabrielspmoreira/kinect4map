@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Linq;
 using ESRI.ArcGIS.Client;
+using Kinect4EsriMap.Extensions;
 using Microsoft.Kinect;
-using Kinect4Map.Utils;
 using ESRI.ArcGIS.Client.Geometry;
-using ESRI.ArcGIS.Client.FeatureService.Symbols;
 using ESRI.ArcGIS.Client.Symbols;
 
-namespace Kinect4Map.Drawing
+namespace Kinect4EsriMap.Drawing
 {
     public class HandsMapDrawer
     {
@@ -52,7 +48,7 @@ namespace Kinect4Map.Drawing
         {
             if (rightHandTracked)
             {
-                MapPoint rightHandCoordinate = PositionsHelper.SkeletonPointToMap(rightHandPoint, this.map, sensor);
+                var rightHandCoordinate = rightHandPoint.ToEsriWebMercatorMapPoint(map);
                 DrawHandBrowsing(rightHandCoordinate, JointType.HandRight);
             }
             else
@@ -62,7 +58,7 @@ namespace Kinect4Map.Drawing
 
             if (leftHandTracked)
             {
-                MapPoint leftHandCoordinate = PositionsHelper.SkeletonPointToMap(leftHandPoint, this.map, sensor);
+                var leftHandCoordinate = leftHandPoint.ToEsriWebMercatorMapPoint(map);
                 DrawHandBrowsing(leftHandCoordinate, JointType.HandLeft);
             }
             else

@@ -1,4 +1,4 @@
-﻿namespace Kinect4Map.Drawing
+﻿namespace Kinect4EsriMap.Drawing
 {
     public enum HandMapSymbol
     {
