@@ -105,7 +105,7 @@ namespace Kinect4TelerikMap.MapUtils
 
         private MapProviderBase GetMapProvider()
         {
-            var provider = new OpenStreetMapProvider();            
+            var provider = new OpenStreetMapProvider();   
             /*provider.IsTileCachingEnabled = true;
             if (provider.IsTileCachingEnabled)
             {
