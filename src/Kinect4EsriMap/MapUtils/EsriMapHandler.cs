@@ -27,7 +27,7 @@ namespace Kinect4EsriMap.MapUtils
                               {
                                   ID = "BaseMap",                                 
                                   Url =
-                                      "http://services.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer"
+                                      "http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer"
                               };
             baseMap.Initialized += BaseMapInitialized;
             _map.Layers.Add(baseMap);
