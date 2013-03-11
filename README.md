@@ -7,6 +7,8 @@ Currently supported WPF map controls are:
 
 You can use a Microsoft Kinect for Windows sensor, or event your Kinect for XBox 360 sensor for testing (MS Kinect SDK 1.5)
 
+![Kinect4Map Sample App screenshot](https://raw.github.com/gabrielspmoreira/kinect4map/master/resources/screenshot_demoapp.png) 
+
 Projects
 ----------
 * **Kinect4Map** - Interfaces and generic implemantations for Kinect and map controls interface
