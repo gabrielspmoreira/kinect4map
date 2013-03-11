@@ -5,11 +5,11 @@ Currently supported WPF map controls are:
 * ESRI ArcGIS Runtime for WPF
 * Telerik Map Control
 
-You can use a Microsoft Kinect for Windows sensor, or event your Kinect for XBox 360 sensor for testing (MS Kinect SDK 1.5)
+You can use a Microsoft Kinect for Windows sensor, or event your Kinect for XBox 360 sensor (with an adapter cable) for testing (MS Kinect SDK 1.5)
 
 ![Kinect4Map Sample App screenshot](https://raw.github.com/gabrielspmoreira/kinect4map/master/resources/screenshot_demoapp.png) 
 
-Projects
+Structure
 ----------
 * **Kinect4Map** - Interfaces and generic implemantations for Kinect and map controls interface
 * **Kinect4EsriMap** - Kinect4Map implementation for ArcGIS Runtime for WPF
@@ -39,6 +39,8 @@ To set which map control will be used in the sample WPF app, go to **SampleWPFMa
 builder.RegisterModule(new EsriMapModule());   
 //builder.RegisterModule(new TelerikMapModule());   
 ```
+
+When running, you will need an internet connection for base maps retrieval (from ESRI (ArcGIS Online) or Telerik (OpenStreetBase) and a Kinect Sensor.
 
 Roadmap
 ----------
