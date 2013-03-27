@@ -2,9 +2,6 @@
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
 using Autofac;
 using Kinect4Map.Drawing;
 using Kinect4Map.Gestures;
@@ -15,7 +12,7 @@ using MapUtils.Structs;
 using Microsoft.Kinect;
 using SampleWPFMappApp.DI;
 
-namespace SampleWPFMappApp.View
+namespace SampleWPFMapApp.View
 {
     /// <summary>
     /// Interaction logic for DemoMap.xaml
