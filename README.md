@@ -1,3 +1,6 @@
+**IMPORTANT**: This project was embraced and replaced by [NUI4Map.NET](http://github.com/gabrielspmoreira/nui4map.net) project, that support Kinect and Leap sensors for a Natural User Interface with WPF map controls.  
+New updates will be released on [NUI4Map.NET](http://github.com/gabrielspmoreira/nui4map.net)
+
 kinect4map
 ==========
 A tool set of .NET libraries to ease creation of WPF applications with **maps controlled by Microsoft Kinect**.   
